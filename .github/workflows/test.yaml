@@ -1,12 +1,12 @@
-name: Deploy
+name: Test on PR
 
 on:
-  push:
+  pull_request:
     types: [master]
 
 jobs:
-  deploy:
-    name: Deploy to datalake
+  test:
+    name: Test infra on PR
     runs-on: ubuntu-lastest
 
     steps:
@@ -35,5 +35,4 @@ jobs:
           $COMMAND_IAC init
           $COMMAND_IAC validate
           $COMMAND_IAC plan
-          $COMMAND_IAC apply -auto-approve
 
