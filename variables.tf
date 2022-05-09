@@ -12,3 +12,7 @@ variable "numero_conta" {
     default = 343554143164
   
 }
+
+variable "aws_region" {
+  default = "us-east-1"
+}
